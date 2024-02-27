@@ -1,38 +1,107 @@
-.App {
-  text-align: center;
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Open Sans", sans-serif;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.drag-drop-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: monospace;
+  padding: 20px;
+  border: dashed #ddd;
+  background: #f9f9f9;
+  color: #666;
+  margin-bottom: 15px;
+  width: fit-content;
+  height: fit-content;
+}
+
+.main-form {
+  width: 500px;
+  margin: 0 auto;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.drag-drop-board,
+.todo-form {
+  display: flex;
+  justify-content: space-around;
+}
+
+.drag-drop-header {
+  text-decoration-line: underline;
+  font-size: 1.5rem;
+}
+
+.task-header {
+  margin: 10px;
+  text-decoration: underline;
+  font-size: 1rem;
+}
+
+.task-card {
+  height: 50px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  padding: 5px;
+}
+.Form {
+  width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #bd9090;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+}
+.Edit > button {
+  display: flex;
+  flex-direction: column;
+  padding: 2px;
+  margin: 2px auto;
+  background-color: #f50909;
+}
+.Form > label {
+  padding: 2px;
+  color: #3c3c3c;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  text-align: left;
+}
+
+.Form input[type="text"] {
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.Form button[type="submit"] {
+  background-color: #4caf50;
   color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Form button[type="submit"]:hover {
+  background-color: #3e8e41;
 }
